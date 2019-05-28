@@ -84,8 +84,8 @@ class Threader(object):
                 this_status = tweet
             self.tweets.append(this_status)
 
-        if not all(len(tweet) < int(self.max_char) for tweet in self.tweets):
-            raise ValueError("Not all tweets are less than {} characters".format(int(self.max_char)))
+        # if not all(len(tweet) < int(self.max_char) for tweet in self.tweets):
+            # raise ValueError("Not all tweets are less than {} characters".format(int(self.max_char)))
 
     def send_tweets(self):
         """Send the queued tweets to twitter."""
